@@ -159,7 +159,7 @@ static bool initiate_hold (uint_fast16_t new_state)
     else
         restore_condition.coolant.mask = gc_state.modal.coolant.mask | hal.coolant.get_state().mask;
 
-    if (restore_condition.spindle[restore_condition.spindle_num].hal->cap.laser && settings.flags.disable_laser_during_hold)
+    if (settings.flags.disable_laser_during_hold)
         enqueue_spindle_override(CMD_OVERRIDE_SPINDLE_STOP);
 
     if (sys_state & (STATE_CYCLE|STATE_JOG)) {
