@@ -2076,7 +2076,7 @@ PROGMEM static const setting_detail_t setting_detail[] = {
      { Setting_DoorOptions, Group_SafetyDoor, "Safety door options", NULL, Format_Bitfield, "Ignore when idle,Keep coolant state on open", NULL, NULL, Setting_IsExtended, &settings.safety_door.flags.value, NULL, is_setting_available },
 #endif
      { Setting_SleepEnable, Group_General, "Sleep enable", NULL, Format_Bool, NULL, NULL, NULL, Setting_IsExtendedFn, set_sleep_enable, get_int, is_setting_available },
-     { Setting_HoldActions, Group_General, "Feed hold actions", NULL, Format_Bitfield, "Disable laser during hold,Restore spindle and coolant state on resume", NULL, NULL, Setting_IsExtendedFn, set_hold_actions, get_int, NULL },
+     { Setting_HoldActions, Group_General, "Feed hold actions", NULL, Format_Bitfield, "Disable laser/spindle during hold,Restore spindle and coolant state on resume", NULL, NULL, Setting_IsExtendedFn, set_hold_actions, get_int, NULL },
      { Setting_ForceInitAlarm, Group_General, "Force init alarm", NULL, Format_Bool, NULL, NULL, NULL, Setting_IsExtendedFn, set_force_initialization_alarm, get_int, NULL },
      { Setting_ProbingFlags, Group_Probing, "Probing flags", NULL, Format_Bitfield, "Allow feed override,Apply soft limits", NULL, NULL, Setting_IsExtendedFn, set_probe_flags, get_int, is_setting_available },
 #if ENABLE_SPINDLE_LINEARIZATION
